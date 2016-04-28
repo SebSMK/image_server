@@ -33,13 +33,27 @@ module.exports = function(router, io) {
   router.use('/imgsrv/test/zoom/images/', proxy(url.parse(sprintf('http://localhost:%s/images/', config.port))));
   
   
-  router.get('/imgsrv/test/zoom/:id',                       
+  router.get('/imgsrv/test/iipmoov/:id',                       
       function(req, res, next) {        
         sendInterfaceMessage('//////// start zooming *******');                                
         
         getImageData(req.params.id)
         .then(function(params){
           res.render('zoom', {title: params.invnumber, invnumber: params.invnumber, path: params.path, IIPServerPath: config.IIPPath});
+        })
+        .catch(function (err){
+          res.send(500);
+        })
+         
+  });  
+  
+  router.get('/imgsrv/test/osd/:id',                       
+      function(req, res, next) {        
+        sendInterfaceMessage('//////// start zooming *******');                                
+        
+        getImageData(req.params.id)
+        .then(function(params){
+          res.render('osd', {title: params.invnumber, invnumber: params.invnumber, path: params.path, IIPServerPath: config.IIPPath});
         })
         .catch(function (err){
           res.send(500);

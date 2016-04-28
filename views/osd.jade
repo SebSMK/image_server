@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    
+    title=title
+
+    meta(content='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    meta(name='google', content='notranslate')  
+    
+    meta(name='og:title', content='')
+    meta(name='og:type', content='website')
+    meta(name='og:site_name', content='SMK | Image cropping')
+    meta(name='og:description', content='')
+               
+    link(rel='stylesheet', href='/osd/static/css/viewer.css')
+    link(rel='stylesheet', href='/osd/static/css/smk.css')    
+    
+    link(rel='shortcut icon', href='/images/smk-favicon.png')
+    link(rel='apple-touch-icon', href='/images/smk.png')
+    
+    style(type='text/css').
+      body{
+       width:100%;
+       height:100%;
+       margin:0;
+       padding:0; 
+       font-family: Verdana, Geneva, sans-serif;
+      }
+     
+    script(src="/osd/static/js/openseadragon.min.js")
+    script(src="/osd/static/js/osdregionselect.js")
+    script(src="/osd/static/js/viewer.js")
+    
+  
+  body       
+    div#map
+    div#viewer
+    
+    script.
+      var image = "#{path}";
+      var server = "#{IIPServerPath}"; 
+      
+    script(src="/osd/static/js/osd.js")
+    
+    

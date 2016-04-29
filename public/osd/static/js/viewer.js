@@ -11996,7 +11996,7 @@
             e = d.createClass({
                 displayName: "CloseButton",
                 render: function() {
-                    return this.props.dark ? imageSrc = "/osd/static/img/close_dark.png" : imageSrc = "/osd/static/img/close.png", d.createElement("div", {
+                    return this.props.dark ? imageSrc = "static/img/close_dark.png" : imageSrc = "static/img/close.png", d.createElement("div", {
                         className: "button__close",
                         onClick: this.props.onClick
                     }, d.createElement("img", {
@@ -12018,7 +12018,7 @@
                         href: "#",
                         onClick: this.props.togglePopup
                     }, d.createElement("img", {
-                        src: "/osd/static/img/embed.png"
+                        src: "static/img/embed.png"
                     }))
                 }
             });
@@ -12071,7 +12071,7 @@
                     }, "Embed on social media"), d.createElement("p", {
                         className: "embed__callout"
                     }, d.createElement("img", {
-                        src: "/osd/static/img/share_small.png",
+                        src: "static/img/share_small.png",
                         className: "embed__icon"
                     }), "Copy the URL in the address bar above")), d.createElement("div", {
                         className: "embed__option"
@@ -12080,7 +12080,7 @@
                     }, "Embed on website or blog"), d.createElement("p", {
                         className: "embed__callout"
                     }, d.createElement("img", {
-                        src: "/osd/static/img/embed_small.png",
+                        src: "static/img/embed_small.png",
                         className: "embed__icon"
                     }), "Copy the HTML-code below"), d.createElement("label", {
                         className: "embed__zoom-control"
@@ -12130,7 +12130,7 @@
                         href: "#",
                         onClick: this.startSelection
                     }, d.createElement("img", {
-                        src: "/osd/static/img/crop.png"
+                        src: "static/img/crop.png"
                     }))
                 }
             });
@@ -12379,7 +12379,7 @@
                         href: a,
                         target: "_blank"
                     }, d.createElement("img", {
-                        src: "/osd/static/img/embed.png"
+                        src: "static/img/embed.png"
                     }))
                 }
             }),
@@ -12392,14 +12392,14 @@
                         id: "zoom-in-button",
                         href: "#"
                     }, d.createElement("img", {
-                        src: "/osd/static/img/zoom-in.png"
+                        src: "static/img/zoom-in.png"
                     }))), d.createElement("div", {
                         className: "button__rounded"
                     }, d.createElement("a", {
                         id: "zoom-out-button",
                         href: "#"
                     }, d.createElement("img", {
-                        src: "/osd/static/img/zoom-out.png"
+                        src: "static/img/zoom-out.png"
                     }))))
                 }
             });

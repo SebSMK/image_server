@@ -1166,3 +1166,177 @@
     }
 }
 2016-04-28T13:06:34.761Z - [32minfo[39m: zoom:getImageData - solr numfound: status=0, QTime=1, fl=value,id,invnumber, sort=created desc, q=id:"kms1384" OR invnumber:"kms1384", wt=json, numFound=4, start=0, docs=[id=564af362a8f85, invnumber=kms1384, value=/mnt/damapistorage/dev/kms1384_564af362a8f85_pyr.tif, id=564af362a8fa9, invnumber=kms1384, value=/mnt/damapistorage/dev/kms1384_564af362a8fa9_pyr.tif, id=564af362cbde5, invnumber=kms1384, value=/mnt/damapistorage/dev/kms1384_564af362cbde5_pyr.tif, id=564af362d13b9, invnumber=kms1384, value=/mnt/damapistorage/dev/kms1384_564af362d13b9_pyr.tif]
+2016-04-28T13:19:39.257Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:19:39.259Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:19:43.546Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:19:43.548Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:19:47.196Z - [32minfo[39m: Solr Constructor csdev-seb-02:8983
+2016-04-28T13:19:47.207Z - [32minfo[39m: STATUS: 200
+2016-04-28T13:19:47.207Z - [32minfo[39m: HEADERS: {"content-type":"text/plain; charset=UTF-8","connection":"close"}
+2016-04-28T13:19:47.211Z - [34mdebug[39m: Solr: response received {
+    "responseHeader": {
+        "status": 0,
+        "QTime": 0,
+        "params": {
+            "fl": "value,id,invnumber",
+            "sort": "created desc",
+            "q": "id:\"kms1\" OR invnumber:\"kms1\"",
+            "wt": "json"
+        }
+    },
+    "response": {
+        "numFound": 2,
+        "start": 0,
+        "docs": [
+            {
+                "id": "564af3627fab5",
+                "invnumber": "kms1",
+                "value": "/mnt/damapistorage/dev/kms1_564af3627fab5_pyr.tif"
+            },
+            {
+                "id": "564af362cee7c",
+                "invnumber": "kms1",
+                "value": "/mnt/damapistorage/dev/kms1_564af362cee7c_pyr.tif"
+            }
+        ]
+    }
+}
+2016-04-28T13:19:47.212Z - [32minfo[39m: zoom:getImageData - solr numfound: status=0, QTime=0, fl=value,id,invnumber, sort=created desc, q=id:"kms1" OR invnumber:"kms1", wt=json, numFound=2, start=0, docs=[id=564af3627fab5, invnumber=kms1, value=/mnt/damapistorage/dev/kms1_564af3627fab5_pyr.tif, id=564af362cee7c, invnumber=kms1, value=/mnt/damapistorage/dev/kms1_564af362cee7c_pyr.tif]
+2016-04-28T13:20:38.858Z - [32minfo[39m: Solr Constructor csdev-seb-02:8983
+2016-04-28T13:20:38.868Z - [32minfo[39m: STATUS: 200
+2016-04-28T13:20:38.868Z - [32minfo[39m: HEADERS: {"content-type":"text/plain; charset=UTF-8","connection":"close"}
+2016-04-28T13:20:38.890Z - [34mdebug[39m: Solr: response received {
+    "responseHeader": {
+        "status": 0,
+        "QTime": 1,
+        "params": {
+            "fl": "value,id,invnumber",
+            "sort": "created desc",
+            "q": "id:\"kms1\" OR invnumber:\"kms1\"",
+            "wt": "json"
+        }
+    },
+    "response": {
+        "numFound": 2,
+        "start": 0,
+        "docs": [
+            {
+                "id": "564af3627fab5",
+                "invnumber": "kms1",
+                "value": "/mnt/damapistorage/dev/kms1_564af3627fab5_pyr.tif"
+            },
+            {
+                "id": "564af362cee7c",
+                "invnumber": "kms1",
+                "value": "/mnt/damapistorage/dev/kms1_564af362cee7c_pyr.tif"
+            }
+        ]
+    }
+}
+2016-04-28T13:20:38.892Z - [32minfo[39m: zoom:getImageData - solr numfound: status=0, QTime=1, fl=value,id,invnumber, sort=created desc, q=id:"kms1" OR invnumber:"kms1", wt=json, numFound=2, start=0, docs=[id=564af3627fab5, invnumber=kms1, value=/mnt/damapistorage/dev/kms1_564af3627fab5_pyr.tif, id=564af362cee7c, invnumber=kms1, value=/mnt/damapistorage/dev/kms1_564af362cee7c_pyr.tif]
+2016-04-28T13:26:25.298Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:26:25.300Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:28:14.764Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:28:14.765Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:28:58.227Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:28:58.229Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:39:36.079Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:39:36.081Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:39:44.004Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:39:44.009Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:40:00.062Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:40:00.064Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:41:59.115Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:41:59.117Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:42:47.407Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:42:47.409Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:42:48.566Z - [32minfo[39m: Solr Constructor csdev-seb-02:8983
+2016-04-28T13:42:53.595Z - [32minfo[39m: STATUS: 200
+2016-04-28T13:42:53.595Z - [32minfo[39m: HEADERS: {"content-type":"text/plain; charset=UTF-8","connection":"close"}
+2016-04-28T13:42:53.605Z - [34mdebug[39m: Solr: response received {
+    "responseHeader": {
+        "status": 0,
+        "QTime": 1,
+        "params": {
+            "fl": "value,id,invnumber",
+            "sort": "created desc",
+            "q": "id:\"kms1384\" OR invnumber:\"kms1384\"",
+            "wt": "json"
+        }
+    },
+    "response": {
+        "numFound": 4,
+        "start": 0,
+        "docs": [
+            {
+                "id": "564af362a8f85",
+                "invnumber": "kms1384",
+                "value": "/mnt/damapistorage/dev/kms1384_564af362a8f85_pyr.tif"
+            },
+            {
+                "id": "564af362a8fa9",
+                "invnumber": "kms1384",
+                "value": "/mnt/damapistorage/dev/kms1384_564af362a8fa9_pyr.tif"
+            },
+            {
+                "id": "564af362cbde5",
+                "invnumber": "kms1384",
+                "value": "/mnt/damapistorage/dev/kms1384_564af362cbde5_pyr.tif"
+            },
+            {
+                "id": "564af362d13b9",
+                "invnumber": "kms1384",
+                "value": "/mnt/damapistorage/dev/kms1384_564af362d13b9_pyr.tif"
+            }
+        ]
+    }
+}
+2016-04-28T13:42:53.607Z - [32minfo[39m: zoom:getImageData - solr numfound: status=0, QTime=1, fl=value,id,invnumber, sort=created desc, q=id:"kms1384" OR invnumber:"kms1384", wt=json, numFound=4, start=0, docs=[id=564af362a8f85, invnumber=kms1384, value=/mnt/damapistorage/dev/kms1384_564af362a8f85_pyr.tif, id=564af362a8fa9, invnumber=kms1384, value=/mnt/damapistorage/dev/kms1384_564af362a8fa9_pyr.tif, id=564af362cbde5, invnumber=kms1384, value=/mnt/damapistorage/dev/kms1384_564af362cbde5_pyr.tif, id=564af362d13b9, invnumber=kms1384, value=/mnt/damapistorage/dev/kms1384_564af362d13b9_pyr.tif]
+2016-04-28T13:43:17.460Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:43:17.462Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:43:32.087Z - [32minfo[39m: Solr Constructor csdev-seb-02:8983
+2016-04-28T13:43:32.121Z - [32minfo[39m: STATUS: 200
+2016-04-28T13:43:32.122Z - [32minfo[39m: HEADERS: {"content-type":"text/plain; charset=UTF-8","connection":"close"}
+2016-04-28T13:43:32.130Z - [34mdebug[39m: Solr: response received {
+    "responseHeader": {
+        "status": 0,
+        "QTime": 3,
+        "params": {
+            "fl": "value,id,invnumber",
+            "sort": "created desc",
+            "q": "id:\"kksgb2951/71\" OR invnumber:\"kksgb2951/71\"",
+            "wt": "json"
+        }
+    },
+    "response": {
+        "numFound": 0,
+        "start": 0,
+        "docs": []
+    }
+}
+2016-04-28T13:43:32.133Z - [32minfo[39m: zoom:getImageData - image not found :kksgb2951/71
+2016-04-28T13:43:32.135Z - [31merror[39m: zoom:getImageData error=zoom:getImageData - image not found: kksgb2951/71
+2016-04-28T13:43:50.164Z - [34mdebug[39m: Overriding 'Express' logger
+2016-04-28T13:43:50.166Z - [32minfo[39m: Serving images from /mnt/damapistorage/dev/ on port 4000
+2016-04-28T13:44:32.699Z - [32minfo[39m: Solr Constructor csdev-seb-02:8983
+2016-04-28T13:44:47.343Z - [32minfo[39m: STATUS: 200
+2016-04-28T13:44:47.344Z - [32minfo[39m: HEADERS: {"content-type":"text/plain; charset=UTF-8","connection":"close"}
+2016-04-28T13:44:47.354Z - [34mdebug[39m: Solr: response received {
+    "responseHeader": {
+        "status": 0,
+        "QTime": 1,
+        "params": {
+            "fl": "value,id,invnumber",
+            "sort": "created desc",
+            "q": "id:\"kksgb2951/71\" OR invnumber:\"kksgb2951/71\"",
+            "wt": "json"
+        }
+    },
+    "response": {
+        "numFound": 0,
+        "start": 0,
+        "docs": []
+    }
+}
+2016-04-28T13:45:25.584Z - [32minfo[39m: zoom:getImageData - image not found :kksgb2951/71
+2016-04-28T13:45:25.587Z - [31merror[39m: zoom:getImageData error=zoom:getImageData - image not found: kksgb2951/71

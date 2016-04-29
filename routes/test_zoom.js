@@ -29,15 +29,20 @@ module.exports = function(router, io) {
   //* proxying calls to IIP server
   router.use(config.IIPPath, proxy(url.parse(sprintf('http://%s%s', config.IIPHost,config.IIPPath))));
   
-  //* proxying calls to IIP images
-  router.use('/imgsrv/test/zoom/images/', proxy(url.parse(sprintf('http://localhost:%s/images/', config.port))));
+  //* proxying calls to IIP viewer intern images
+  router.use('/imgsrv/zoom/iipmoov/images/', proxy(url.parse(sprintf('http://localhost:%s/images/', config.port))));
+  router.use('/imgsrv/zoom/compare/images/', proxy(url.parse(sprintf('http://localhost:%s/images/', config.port))));
+  
+  //* proxying calls to OSD viewer intern images
+  router.use('/imgsrv/zoom/osd/static/img/', proxy(url.parse(sprintf('http://localhost:%s/osd/static/img/', config.port))));
   
   
-  router.get('/imgsrv/test/iipmoov/:id',                       
-      function(req, res, next) {        
-        sendInterfaceMessage('//////// start zooming *******');                                
+  router.get('/imgsrv/zoom/iipmoov/*',                       
+      function(req, res, next) {
+        var id = req.params[0];        
+        sendInterfaceMessage('//////// get iipmoov zooming *******');                                
         
-        getImageData(req.params.id)
+        getImageData(id)
         .then(function(params){
           res.render('zoom', {title: params.invnumber, invnumber: params.invnumber, path: params.path, IIPServerPath: config.IIPPath});
         })
@@ -47,11 +52,12 @@ module.exports = function(router, io) {
          
   });  
   
-  router.get('/imgsrv/test/osd/:id',                       
+  router.get('/imgsrv/zoom/osd/*',                       
       function(req, res, next) {        
-        sendInterfaceMessage('//////// start zooming *******');                                
+        var id = req.params[0];
+        sendInterfaceMessage('//////// get osd zooming *******');                                
         
-        getImageData(req.params.id)
+        getImageData(id)
         .then(function(params){
           res.render('osd', {title: params.invnumber, invnumber: params.invnumber, path: params.path, IIPServerPath: config.IIPPath});
         })
@@ -60,7 +66,47 @@ module.exports = function(router, io) {
         })
          
   });  
+  
+  
+   router.post('/imgsrv/zoom/compare', urlencodedParser,                    
+      function(req, res, next) {               
+        sendInterfaceMessage('//////// post compare zooming *******');                                
         
+        var images_received = JSON.parse(req.body.images);
+        var promise = [];
+        var deferred = Q.defer();                
+        
+        for (i = 0; i < images_received.length; i++) {            
+            promise.push(getImageData(images_received[i].id));
+        };
+        
+        Q.allSettled(promise).then(function(result) {
+            //loop through array of promises, add items  
+            var tosend = [] 
+            var images_2zoom = [];            
+            result.forEach(function(res) {
+                if (res.state === "fulfilled") {
+                    var tmpjs = {};
+                    tmpjs["path"] = res.value.path;
+                    images_2zoom.push(tmpjs);                                                            
+                }
+                else if (res.state === "rejected") {                    
+                    logger.error('LOCAL ERR:zoom:post', res.reason);
+                    sendInterfaceMessage('LOCAL ERR:zoom:post: ' + res.reason);                       
+                }
+            });
+            promise = []; //empty array, since it's global.
+                       
+            res.render('compare', {images_2zoom:JSON.stringify(images_2zoom), IIPServerPath: config.IIPPath});                                    
+                        
+        })
+        .catch(function (err){
+          logger.error('GENERAL ERR: zoom:post', err);
+          sendInterfaceMessage('GENERAL ERR:zoom:post: ' + err);
+          res.send(500);
+        });        
+         
+  });      
 
   /***
  *  PRIVATE FUNCTIONS
